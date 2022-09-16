@@ -1,0 +1,17 @@
+{% extends '_base.html' %}
+
+{% block page_title %}
+    لیست کتاب ها
+{% endblock %}
+
+{% block content %}
+    {% for book in  book_list %}
+        <h1>{{ book.title }}</h1>
+        <br>
+        <p>{{ book.author }}</p>
+        <br>
+        <p>{{ book.description|truncatewords:20 }}</p>
+        <p>-------------</p>
+    {% endfor %}
+
+{% endblock %}
