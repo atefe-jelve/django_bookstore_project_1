@@ -6,12 +6,11 @@
 
 {% block content %}
     {% for book in  book_list %}
-        <h1>{{ book.title }}</h1>
+    <a href="{{ book.get_absolute_url }}"><h1>{{ book.title }}</h1></a>
         <br>
         <p>{{ book.author }}</p>
         <br>
         <p>{{ book.description|truncatewords:20 }}</p>
         <p>-------------</p>
     {% endfor %}
-
 {% endblock %}
