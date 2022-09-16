@@ -13,4 +13,6 @@
         <p>{{ book.description|truncatewords:20 }}</p>
         <p>-------------</p>
     {% endfor %}
+
+    <a class="btn btn-info" href="{% url 'book_create' %}">افزودن</a>
 {% endblock %}

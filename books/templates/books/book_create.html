@@ -5,10 +5,10 @@
 {% endblock %}
 
 {% block content %}
-    <form>
+    <form method="post">
+        {% csrf_token %}
         {{ form.as_p }}
-        <button  class="btn btn-success" type="submit"> افزودن</button>
-
+        <button class="btn btn-success" type="submit"> افزودن</button>
 
     </form>
 {% endblock %}
